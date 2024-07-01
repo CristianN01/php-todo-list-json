@@ -5,6 +5,10 @@ createApp({
         return {
         titolo: '',
         todolist: [],
+        completato: '',
+        titolo: '',
+        descrizione: '',
+        completato: ''
         }
     },
     methods: {
@@ -12,6 +16,7 @@ createApp({
             axios.get('./server.php', {
                 params: {
                     titolo: this.titolo,
+                    completato: this.completato
                 }
                 })
                 .then((response) => {
@@ -25,6 +30,25 @@ createApp({
                 // always executed
                 });  
         },
+        newTaskData(titolo, descrizione, completato ) {
+            axios.get('./adder.php', {
+                params: {
+                    titolo: titolo,
+                    descrizione: descrizione,
+                    completato: completato,
+                }
+                })
+                .then( function (response) {
+                console.log(response);
+                this.todolist_newTask = response.data;
+                })
+                .catch(function (error) {
+                console.log(error);
+                })
+                .finally(function () {
+                // always executed
+                });  
+        }
 
     },
     created(){

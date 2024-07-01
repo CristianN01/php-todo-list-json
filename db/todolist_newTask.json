@@ -1,0 +1,34 @@
+{
+    "todolist": [
+        {
+            "id": 1,
+            "titolo": "Fare la spesa",
+            "descrizione": "Comprare latte, pane, uova e frutta",
+            "completato": false
+        },
+        {
+            "id": 2,
+            "titolo": "Portare fuori il cane",
+            "descrizione": "Passeggiata al parco per 30 minuti",
+            "completato": true
+        },
+        {
+            "id": 3,
+            "titolo": "Studiare PHP",
+            "descrizione": "Completa il capitolo 4 del libro di PHP",
+            "completato": false
+        },
+        {
+            "id": 4,
+            "titolo": "Pulire la casa",
+            "descrizione": "Spolverare, passare l'aspirapolvere e lavare i pavimenti",
+            "completato": false
+        },
+        {
+            "id": 5,
+            "titolo": "Chiamare il dottore",
+            "descrizione": "Prenotare un appuntamento per il controllo annuale",
+            "completato": true
+        }
+    ]
+}

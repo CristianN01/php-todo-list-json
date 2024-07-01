@@ -18,11 +18,34 @@
                         La mia TodoList!!
                     </h1>
                 </div>
-                <div class="col-12" v-for="item in todolist">
+                <div class="col-12">
+                    <div class="row">
+                        <div class="col-3">
+                            <div class="text mb-2">
+                                <label for="titolo">Titolo</label>
+                                <input class='form-control' type="text" name="titolo" id="titolo" v-model.trim="titolo">
+                            </div>
+                            <div class="text mb-2">
+                                <label for="descrizione">Descrizione</label>
+                                <input  class='form-control' type="text" name="descrizione" id="descrizione" v-model.trim="descrizione">
+                            </div>
+                            <div class="text mb-2">
+                                <label for="completato">Completato?</label>
+                                <input class='form-control' type="text" name="completato" id="completato" v-model.trim="completato">
+                            </div>
+                        </div>
+                        <div class="col-2 text-center d-flex align-items-center">
+                            <button class='btn btn-secondary' type="submit" @click="newTaskData(titolo, descrizione, completato)">Aggiungi</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 mb-4" v-for="item in todolist">
                     <div class="line">
                         <ul>
                             <li>
-                               {{ item.titolo }}
+                               <h3> {{ item.titolo }} </h3>
+                               <p> {{ item.descrizione }} </p>
+                               <h5> {{ item.completato }} </h5>
                             </li>
                         </ul>
                     </div>
