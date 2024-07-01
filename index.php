@@ -18,13 +18,23 @@
                         La mia TodoList!!
                     </h1>
                 </div>
+                <div class="col-12" v-for="item in todolist">
+                    <div class="line">
+                        <ul>
+                            <li>
+                               {{ item.titolo }}
+                            </li>
+                        </ul>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
     </main>
-    
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.7.2/axios.min.js" integrity="sha512-JSCFHhKDilTRRXe9ak/FJ28dcpOJxzQaCd3Xg8MyF6XFjODhy/YMCM8HW0TFDckNHWUewW+kfvhin43hKtJxAw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="./js/script.js"></script>
 </body>
 </html>
